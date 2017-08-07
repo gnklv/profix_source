@@ -1,0 +1,29 @@
+.c-404 {
+	padding: 100px 0;
+	background: url(../images/404-bg.jpg) no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
+
+	&__image {
+		max-width: 100%;
+		margin-bottom: 20px;	
+	}
+
+	&__title {
+		margin-bottom: round(10/52em, 3);
+		.fz(52, 64);
+		color: #fff;
+		font-family: @font-regular;
+
+		@media screen and (max-width: @screen-sm) {
+			.fz(36, 40);
+		}
+	}
+
+	&__desc {
+		.fz(16, 20);
+		color: #fff;
+		font-family: @font-regular;
+	}
+}

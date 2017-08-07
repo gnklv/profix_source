@@ -1,0 +1,144 @@
+{% extends layout %}
+{% block content %}
+<section class="wrapper">
+	<div class="centering">
+		<h1 class="big_page_name">
+			Личный кабинет
+		</h1>
+		<div class="pers-area__inner">
+			<div class="pers-area-content">
+				<div class="pers-area-content__item" id="pers-data">
+					<h2 class="pers-area-content__title">
+						Мои данные
+					</h2>
+					<form action="" method="post">
+						<div class="pers-area-data__item">
+							<h3 class="pers-area-data__title">
+								Персональная информация
+							</h3>
+							<div class="l-row pers-area-data__row">
+								<div class="l-col--md-6">
+									<label class="pers-area-data__label" for="data-first-name">Имя*:</label>
+									<input class="pers-area-data__input" id="data-first-name" type="text" required>
+								</div>
+								<div class="l-col--md-6">
+									<label class="pers-area-data__label" for="data-second-name">Фамилия*:</label>
+									<input class="pers-area-data__input" id="data-second-name" type="text" required>
+								</div>
+							</div>
+							<div class="l-row pers-area-data__row">
+								<div class="l-col--md-6">
+									<label class="pers-area-data__label" for="data-email">E-mail*:</label>
+									<input class="pers-area-data__input" id="data-email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+								</div>
+								<div class="l-col--md-6">
+									<label class="pers-area-data__label" for="data-telephone">Телефон:</label>
+									<input class="pers-area-data__input" id="data-telephone" type="tel" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+								</div>
+							</div>
+							<div class="l-row pers-area-data__row">
+								<div class="l-col--md-6">
+									<p class="pers-area-data__label">Дата рождения:</p>
+									<div class="l-row l-row--sec">
+										<div class="l-col--sm-4 l-col--sec">
+											<select class="pers-area-data__select" id="pers-days"></select>
+										</div>
+										<div class="l-col--sm-4 l-col--sec">
+											<select class="pers-area-data__select" id="pers-months"></select>
+										</div>
+										<div class="l-col--sm-4 l-col--sec">
+											<select class="pers-area-data__select" id="pers-years"></select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="pers-area-data__item">
+							<h3 class="pers-area-data__title">
+								Адреса доставки
+							</h3>
+							<div class="l-row pers-area-data__row">
+								<div class="l-col--md-6">
+									<label class="pers-area-data__label" for="data-city">Населенный пункт, область:</label>
+									<input class="pers-area-data__input" id="data-city" type="text">
+								</div>
+								<div class="l-col--md-6">
+									<div class="l-row--sec">
+										<div class="l-col--sm-4 l-col--sec">
+											<label class="pers-area-data__label" for="data-index">Индекс</label>
+											<input class="pers-area-data__input" id="data-index" type="text" pattern="[0-9]{6}">
+										</div>
+										<div class="l-col--sm-8 l-col--sec">
+											<label class="pers-area-data__label" for="data-street">Улица</label>
+											<input class="pers-area-data__input" id="data-street" type="text">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="l-row pers-area-data__row">
+								<div class="l-col--md-6">
+									<div class="l-row l-row--sec">
+										<div class="l-col--sm-3 l-col--sec">
+											<label class="pers-area-data__label" for="data-house">Дом:</label>
+											<input class="pers-area-data__input" id="data-house" type="text">
+										</div>
+										<div class="l-col--sm-3 l-col--sec">
+											<label class="pers-area-data__label" for="data-housing">Корпус:</label>
+											<input class="pers-area-data__input" id="data-housing" type="text">
+										</div>
+										<div class="l-col--sm-3 l-col--sec">
+											<label class="pers-area-data__label" for="data-structure">Строение:</label>
+											<input class="pers-area-data__input" id="data-structure" type="text">
+										</div>
+										<div class="l-col--sm-3 l-col--sec">
+											<label class="pers-area-data__label" for="data-apartment">Квартира:</label>
+											<input class="pers-area-data__input" id="data-apartment" type="text">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="pers-area-data__item">
+							<h3 class="pers-area-data__title">Подписка</h3>
+
+							<input class="pers-area-data__check" type="checkbox" id="data-subs">
+							<label class="pers-area-data__check-label" for="data-subs">Я&nbsp;хочу получать эксклюзивные новости об&nbsp;акциях и&nbsp;новинках по&nbsp;электронной почте</label>
+
+							<button class="pers-area-data__submit" type="submit">
+								Сохранить изменения
+							</button>
+						</div>
+					</form>
+				</div>
+
+				<div class="pers-area-content__item" id="pers-history" style="display: none;"></div>
+
+				<div class="pers-area-content__item" id="pers-favorit" style="display: none;"></div>
+			</div>
+
+			<div class="pers-area-navigation">
+				<a href="pers-data" class="pers-area-navigation__link active">
+					<span class="pers-area-navigation__icon pers-area-navigation__icon--data"></span>
+					<span class="pers-area-navigation__text">
+						Мои данные
+					</span>
+				</a>
+				<a href="pers-history" class="pers-area-navigation__link">
+					<span class="pers-area-navigation__icon pers-area-navigation__icon--history"></span>
+					<span class="pers-area-navigation__text">
+						История заказов
+					</span>
+				</a>
+				<a href="pers-favorit" class="pers-area-navigation__link">
+					<span class="pers-area-navigation__icon pers-area-navigation__icon--favorit"></span>
+					<span class="pers-area-navigation__text">
+						Избранное
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

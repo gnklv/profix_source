@@ -1,0 +1,51 @@
+{
+	"devStatic": "/",
+	"buildStatic": "",
+	"buildDir": "build",
+	"port": 8080,
+	"dpe": false,
+	"commonData": ["data"],
+	"defaultLayout": "layout.html", 
+	"emptyLayout": "empty_layout.html", 
+	"contentOnly": false,
+	"storage": "https://your-path-to-blob",
+	"buildIgnore": ["less", "javascripts/sources"],
+	"pages": [
+		{
+			"name": "index",
+			"route": "/",
+			"pageData": ["index"],
+			"pageVars": {
+				"title": "Профикс",
+				"description": "Профикс"
+			}
+		},
+		{
+			"name": "404",
+			"route": "/404",
+			"pageData": ["index"],
+			"pageVars": {
+				"title": "404",
+				"description": "404"
+			}
+		},
+		{
+			"name": "about",
+			"route": "/about",
+			"pageData": ["index"],
+			"pageVars": {
+				"title": "Профикс",
+				"description": "Профикс"
+			}
+		},
+		{
+			"name": "personal_area",
+			"route": "/personal_area",
+			"pageData": ["index"],
+			"pageVars": {
+				"title": "Профикс",
+				"description": "Профикс"
+			}
+		}
+	]
+}
